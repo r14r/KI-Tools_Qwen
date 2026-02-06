@@ -9,7 +9,7 @@ Before starting, verify you have the necessary tools:
 ```bash
 # Check Docker installation
 docker --version
-docker-compose --version
+docker compose --version
 
 # Check NVIDIA Docker runtime (for GPU support)
 docker run --rm --gpus all nvidia/cuda:12.1.0-base-ubuntu22.04 nvidia-smi
@@ -59,16 +59,16 @@ cd Qwen3-ASR
 export HF_TOKEN="your_token_here"
 
 # 3. Build and start
-docker-compose build
-docker-compose up -d
+docker compose build
+docker compose up -d
 
 # 4. View logs
-docker-compose logs -f
+docker compose logs -f
 
 # 5. Access the app at http://localhost:7863
 
 # 6. Stop when done
-docker-compose down
+docker compose down
 ```
 
 ## Example 2: Running Multiple Apps
@@ -178,14 +178,14 @@ nano .env
 
 # 3. Docker Compose will automatically load .env
 cd Qwen3-ASR
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Option 2: Inline Environment Variables
 
 ```bash
 cd Qwen3-ASR
-HF_TOKEN="your_token_here" docker-compose up -d
+HF_TOKEN="your_token_here" docker compose up -d
 ```
 
 ### Option 3: Export for Session
@@ -194,7 +194,7 @@ HF_TOKEN="your_token_here" docker-compose up -d
 # Set for current terminal session
 export HF_TOKEN="your_token_here"
 
-# This will be available for all docker-compose commands
+# This will be available for all docker compose commands
 cd Qwen3-ASR
 just up
 ```
@@ -245,10 +245,10 @@ cd Qwen3-ASR
 just logs
 
 # View logs with timestamps
-docker-compose logs -f --timestamps
+docker compose logs -f --timestamps
 
 # View logs for last 100 lines
-docker-compose logs --tail=100
+docker compose logs --tail=100
 ```
 
 ### Restart Container

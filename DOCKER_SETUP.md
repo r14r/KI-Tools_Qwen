@@ -44,14 +44,14 @@ just down
 cd Qwen3-ASR
 
 # Build and start
-docker-compose build
-docker-compose up -d
+docker compose build
+docker compose up -d
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 
 # Stop
-docker-compose down
+docker compose down
 ```
 
 ## Available Commands (Just)
@@ -160,7 +160,7 @@ python3 app.py
 cd Qwen3-ASR
 just shell
 # or
-docker-compose exec qwen3-asr bash
+docker compose exec qwen3-asr bash
 ```
 
 ## Notes
