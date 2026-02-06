@@ -62,12 +62,12 @@ down-all:
 # View logs from all apps
 logs-all:
     @echo "Showing logs from all apps (Ctrl+C to exit)..."
-    docker compose -f Qwen-Image-2512/docker compose.yml logs -f &
-    docker compose -f Qwen-Image-Edit-2511/docker compose.yml logs -f &
-    docker compose -f Qwen-Image-Layered/docker compose.yml logs -f &
-    docker compose -f Qwen3-ASR/docker compose.yml logs -f &
-    docker compose -f Qwen3-TTS/docker compose.yml logs -f &
-    docker compose -f Qwen3-TTS-Voice-Design/docker compose.yml logs -f &
+    docker compose -f Qwen-Image-2512/docker-compose.yml logs -f &
+    docker compose -f Qwen-Image-Edit-2511/docker-compose.yml logs -f &
+    docker compose -f Qwen-Image-Layered/docker-compose.yml logs -f &
+    docker compose -f Qwen3-ASR/docker-compose.yml logs -f &
+    docker compose -f Qwen3-TTS/docker-compose.yml logs -f &
+    docker compose -f Qwen3-TTS-Voice-Design/docker-compose.yml logs -f &
     wait
 
 # Clean all containers and volumes
