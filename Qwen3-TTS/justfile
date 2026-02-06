@@ -1,0 +1,55 @@
+# Justfile for Qwen3-TTS
+
+# Default recipe to display help
+default:
+    @just --list
+
+# Build Docker image
+build:
+    docker compose build
+
+# Start the application
+up:
+    docker compose up -d
+
+# Start the application with logs
+up-logs:
+    docker compose up
+
+# Stop the application
+down:
+    docker compose down
+
+# Restart the application
+restart:
+    docker compose restart
+
+# View logs
+logs:
+    docker compose logs -f
+
+# Check status
+status:
+    docker compose ps
+
+# Clean up containers and volumes
+clean:
+    docker compose down -v
+
+# Rebuild and restart
+rebuild:
+    docker compose down
+    docker compose build --no-cache
+    docker compose up -d
+
+# Shell into container
+shell:
+    docker compose exec qwen3-tts bash
+
+# Run the app locally (without Docker)
+run-local:
+    python3 app.py
+
+# Install dependencies locally
+install:
+    pip3 install -r requirements.txt
